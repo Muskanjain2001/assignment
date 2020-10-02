@@ -1,0 +1,22 @@
+
+
+void main()
+{
+  var array = [1 ,2 ,3 ,4 ,7]; // GIRLS Party
+  //var array = [1 ,3 ,2 ,4 ,5 ,1]; // BOYS Party
+  var set = new Set();
+  bool isBoys = false;
+  array.forEach(
+
+    (ele) {
+    if(set.contains(ele)){
+      isBoys = true;// if same value exists then isBoys flag will set true and bingo BOYS rocks otherwise there are GIRLS on the floor
+      return;
+
+    }else{
+      set.add(ele);
+    }
+  });
+
+  print(isBoys?'BOYS Party':'GIRLS Party');
+}
